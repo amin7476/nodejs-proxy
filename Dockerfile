@@ -1,3 +1,4 @@
+
 # 使用官方 Node.js 镜像作为基础镜像
 FROM node:lts-alpine3.18
 
@@ -7,7 +8,8 @@ WORKDIR /app
 # 将应用程序文件复制到容器中
 COPY . .
 
-# EXPOSE 3000
+# 设置容器的暴露端口
+EXPOSE 3000
 
 # 安装应用程序的依赖
 RUN npm install
